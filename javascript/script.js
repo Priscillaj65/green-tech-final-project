@@ -4,12 +4,7 @@ function searchServices() {
 
   cards.forEach(card => {
     let text = card.innerText.toLowerCase();
-
-    if (text.includes(input)) {
-      card.style.display = "block";
-    } else {
-      card.style.display = "none";
-    }
+    card.style.display = text.includes(input) ? "block" : "none";
   });
 }
 
@@ -17,14 +12,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("contactForm");
   const message = document.getElementById("formMessage");
 
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
+  if (!form || !message) return; // prevents errors
 
-      message.textContent = "✅ Thank you! Your message has been sent successfully.";
-      message.style.color = "green";
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-      form.reset();
-    });
-  }
+    message.textContent = "✅ Thank you! Your message has been sent successfully.";
+    message.style.color = "green";
+
+    form.reset();
+  });
 });
