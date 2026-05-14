@@ -18,7 +18,7 @@ GreenTech Solutions is a multi-page responsive website designed to promote susta
 
 ---
 
-## 🛠 Technologies Used
+## Technologies Used
 - HTML
 - CSS
 - JavaScript
