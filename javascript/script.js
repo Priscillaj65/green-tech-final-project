@@ -12,6 +12,7 @@ function searchServices() {
     }
   });
 }
+
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("contactForm");
   const message = document.getElementById("formMessage");
